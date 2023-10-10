@@ -6,6 +6,10 @@ import { onMounted, ref } from 'vue'
 import { auth } from './firebase.js'
 import { signOut, onAuthStateChanged } from 'firebase/auth'
 
+import aboutMe from './components/aboutMe.vue'  // for hvert components du importere ind (sections på siden)
+import heropage from './components/heroPage.vue'
+import kontakt from './components/kontaktPage.vue'
+import portfolio from './components/portfoliePage.vue'
 import router from './router'
 
 let isLoggedIn = ref(false)
@@ -54,12 +58,20 @@ let logOut = () => {
   </header>
 
   <RouterView />
+
+  <!-- lav flere mindre componenter -->
+<!--  <kontaktMig /> // for hvert components du importere ind (sections på siden) -->
+  <heropage />
+  <aboutMe />
+  <kontakt/>
+  <portfolio />
+
 </template>
 
 <style scoped>
 header {
   line-height: 1.5;
-  max-height: 100vh;
+  max-height: 200px;
 }
 
 .logo {
@@ -91,7 +103,7 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
-
+/* 
 @media (min-width: 1024px) {
   header {
     display: flex;
@@ -117,5 +129,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+} */
 </style>

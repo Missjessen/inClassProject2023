@@ -10,14 +10,13 @@ import { getAuth } from "firebase/auth"; // <- needed for auth (later)
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC55qkFnQJffWLBCjPzYDBRf0tMHBDweRE",
-  authDomain: "inclassadvjs.firebaseapp.com",
-  projectId: "inclassadvjs",
-  storageBucket: "inclassadvjs.appspot.com",
-  messagingSenderId: "589233081065",
-  appId: "1:589233081065:web:3dc37aee8d67df10023e78"
+  apiKey: "AIzaSyA_nzZ6B_O6jFkkBxv-D7So0P53ZbOmO_s",
+  authDomain: "projekt-valgfag.firebaseapp.com",
+  projectId: "projekt-valgfag",
+  storageBucket: "projekt-valgfag.appspot.com",
+  messagingSenderId: "759383622349",
+  appId: "1:759383622349:web:db362d1927b408bc7edf84"
 };
-
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

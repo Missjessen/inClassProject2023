@@ -21,7 +21,9 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+
+
  const auth = getAuth(app); // <- needed for auth (later)
  export { auth }
 
-export const db = getFirestore(app); // <- needed for DB so we can use it in our application components
+export const db = getFirestore(app); // <- needed for DB so we can use it in our application componentsls

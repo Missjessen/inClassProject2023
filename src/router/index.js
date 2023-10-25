@@ -22,9 +22,9 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/navguard',
-      name: 'navguard',
-      component: () => import('../views/NavGuardView.vue'),
+      path: '/admin',
+      name: 'admin',
+      component: () => import('../views/AdminView.vue'),
       meta: {
         requiresAuth: true
       }

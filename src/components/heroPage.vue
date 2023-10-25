@@ -10,20 +10,25 @@
       <!--hero-->
     <div class="hero">
      
-            <div class="hero-container">
-              <div class="me"> <img src="@/assets/images/mig1-1.jpg" alt=""></div>
+            <div class="hero-container" width="100%" height="100%">
+              <div class="me"> 
+                <img src="@/assets/images/me-bg.jpg" alt=""></div>
+            
         
 <!-- tekst på hero image-->
       
     <div class="heroo-container-rigth">
+        
              <h1>Multimediedesigner</h1>
             <h2>HEY! Mit navn er Nanna.</h2>
 
              <p>Jeg er en kreativ designer for branding, brugeroplevelse og platforms.</p>
-             <!-- <p>Jeg bringer koncepter og ideer til live, på en helt ny måde.</p> -->
+           
+           
 
 <!--link pil-->
     <span class="hero-knap">
+      
             
             <router-link id="artboard-link" to="/om-mig">
               <img src="@/assets/images/pil-44-2-5.png" alt="">
@@ -35,8 +40,10 @@
               <img src="@/assets/images/pil-44-2-5.png" alt="">
                  <span> CV </span> 
              </a>
+           
 
           </span>
+          
         </div>
        </div>
       </div>
@@ -162,13 +169,22 @@
 
 .hero {
     background: {
+        background-repeat: no-repeat;
+      background-attachment: center;
+      background-position: center top;
+      background-size: cover;
+      height: 800px;
+      width: 100vw;
+      margin-top:-80px; /* skub header op under menu */
+      padding-top: 110px;
     //   repeat: no-repeat;
     //   attachment: left;
     //   position: left;
     //   size: cover;
       }
       .me {
-        height: 200%;
+        height: 300%;
+        width: 300%;
         
       }
       height: 800px;
@@ -205,19 +221,17 @@
            }
 
       .p{
-             font:{
-                size: 25px;
+             font-size: 25px;
               
-           }}
+           }
 
      .h2{
              opacity: 95%;
              color: #FAD5DD;
-             font:{
-                   family: 'Courier New', Courier, monospace;
-                   size: 20px;
-                   weight: lighter;
-             }
+             font-family: 'Courier New', Courier, monospace;
+             font-size: 20px;
+             font-weight: lighter;
+             
          }
     
 
@@ -398,11 +412,17 @@ font-size: 70px;
 /* 3. sektion slut*/
 
 /* resposive*/
-@media only screen and (max-width: 825px) {
+@media only screen and (max-width: 824px) {
   .heroo-container-rigth{
+    .h1{
+        font-size: 6 px;
+     }
+     
+     font-size: 6 px;
     padding-left: 0px;
     }
-
+    
+    
   .what-i-do{
     font-size: large;
     }

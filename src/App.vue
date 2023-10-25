@@ -50,7 +50,7 @@ let logOut = () => {
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/navguard">NavGuard</RouterLink>
+        <RouterLink to="/admin">Admin</RouterLink>
         <RouterLink to="/login">Login</RouterLink>
       </nav>
       <button @click="logOut" v-if="isLoggedIn">Log Out</button>
@@ -61,7 +61,8 @@ let logOut = () => {
 
   <!-- lav flere mindre componenter -->
 <!--  <kontaktMig /> // for hvert components du importere ind (sections på siden) -->
-  <heropage />
+Test  
+<heropage />
   <aboutMe />
   <kontakt/>
   <portfolio />

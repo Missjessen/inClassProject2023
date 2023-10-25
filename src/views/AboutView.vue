@@ -2,11 +2,7 @@
   <div class="about">
     <h1>This is an about page</h1>
 
-    <button class="btn-add" @click="firebaseAddSingleItem()">Add Item</button>
-    <div>
-      <input type="text" placeholder="Product name" v-model="AddProductData.productName" >
 
-    </div>
     <hr>
 
     <div v-for="product in products" :key="product">
@@ -19,12 +15,7 @@
       <p>
         ProductPrice: {{ product.productPrice }}
       </p>
-      <button class="btn-delete" @click="firebaseDeleteSingleItem(product.id)">Delete item</button>
-    
-      <p>
-        <input type="text" placeholder="New product name" v-model="product.productName" />
-      </p>
-      <button class="btn-edit" @click="firebaseUpdateSingleItem(product.id)">Edit item</button>
+
       <hr>
     </div>
   </div>
@@ -37,10 +28,8 @@ import { onMounted } from 'vue'
 const { 
   products, 
   getProductsData, 
-  firebaseDeleteSingleItem, 
-  firebaseAddSingleItem ,
-  AddProductData,
-  firebaseUpdateSingleItem,
+
+
   //UpdateProductData
 } = useProducts();
 

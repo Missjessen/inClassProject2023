@@ -10,12 +10,16 @@ const useProducts = () => {
 
   const AddProductData = ref({
     productName: '',
-    productPrice: ''
+    productBeskrivelse: '',
+    productBillede: '',
+    productKategori: ''
   })
 
   const UpdateProductData = ref({
     productName: '',
-    productPrice: ''
+    productBeskrivelse: '',
+    productBillede: '',
+    productKategori: ''
   })
 
   const getProductsData = () => {
@@ -41,7 +45,9 @@ const useProducts = () => {
     await addDoc(collection(db, "products"),
       {
         productName: AddProductData.value.productName,
-        productPrice: 100
+        productBeskrivelse: AddProductData.value.productBeskrivelse,
+        productBillede: AddProductData.value.productBillede,
+        productKategori: AddProductData.value.productKategori,
       }
     );
       

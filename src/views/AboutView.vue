@@ -13,8 +13,15 @@
         ProductName: {{ product.productName }}
       </p>
       <p>
-        ProductPrice: {{ product.productPrice }}
+        productBeskrivelse: {{ product.productBeskrivelse }}
       </p>
+      <p>
+        ProductBillede: {{ product.productBillede }}
+        </p>
+        <p>
+        ProductKategori: {{ product.productKategori }}
+        </p>
+
 
       <hr>
     </div>

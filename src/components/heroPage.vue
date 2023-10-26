@@ -1,6 +1,6 @@
 <template>
     <div>
-        HOmepage
+       
     </div>
 
     <main>

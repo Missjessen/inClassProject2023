@@ -15,19 +15,19 @@
     <hr>
     <div v-for="product in products" :key="product">
       <p>
-        ProductID: {{ product.id  }}
+        ID: {{ product.id  }}
       </p>
       <p>
-        ProductName: {{ product.productName }}
+        Navn: {{ product.productNavn }}
       </p>
       <p>
-        ProductPrice: {{ product.productBeskrivelse }}
+        Beskrivelse: {{ product.productBeskrivelse }}
       </p>
       <p>
-        ProductBillede: {{ product.productBillede }}
+        Billede: {{ product.productBillede }}
         </p>
         <p>
-        ProductKategori: {{ product.productKategori }}
+       Kategori: {{ product.productKategori }}
         </p>
 
       <button class="btn-delete" @click="firebaseDeleteSingleItem(product.id)">Delete item</button>
@@ -124,11 +124,6 @@ body {
       .btn-edit:hover {
                   background-color: #f3d0aa;}
       
-
-/* Add some spacing to the bottom of the page *
-hr {
-  margin: 20px 0;
-} */
 
 @media (min-width: 1024px) {
   .about {

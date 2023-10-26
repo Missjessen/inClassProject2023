@@ -7,7 +7,7 @@
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 4rem 3rem 2rem 3rem;
 
   font-weight: normal;
 }
@@ -15,13 +15,13 @@
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: #e2d1d1;
   transition: 0.4s;
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: #eedada;
   }
 }
 
@@ -37,6 +37,6 @@ a,
     display: flex;
     flex-direction: column;
 /*     grid-template-columns: 1fr 1fr; */
-    padding: 0 2rem;
+    
   }
 }

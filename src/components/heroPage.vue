@@ -1,7 +1,5 @@
 <template>
-    <div>
-       
-    </div>
+   
 
     <main>
 
@@ -9,22 +7,23 @@
 
       <!--hero-->
     <div class="hero">
-     
-            <div class="hero-container" width="100%" height="100%">
-              <div class="me"> 
-                <img src="@/assets/images/me-bg.jpg" alt=""></div>
-            
-        
+          <div class="hero-container" width="100%" height="100%">
+              <!-- <div class="me"> 
+                <img src="@/assets/images/me-bg.jpg" alt=""></div> -->
+              </div>
+             
+         
 <!-- tekst på hero image-->
       
     <div class="heroo-container-rigth">
-        
-             <h1>Multimediedesigner</h1>
-            <h2>HEY! Mit navn er Nanna.</h2>
+     
+             <h1 class="top1">Multimediedesigner</h1>
+            <h2 class="top2">HEY! Mit navn er Nanna.</h2>
 
-             <p>Jeg er en kreativ designer for branding, brugeroplevelse og platforms.</p>
+             <p class="top3">Jeg er en kreativ designer for branding, </p>
+              <p class="top3">brugeroplevelse og platforms.</p>
            
-           
+            
 
 <!--link pil-->
     <span class="hero-knap">
@@ -36,17 +35,16 @@
             
           
             </router-link>  
-             <a  id="artboard-link" style="margin-left:10px;" href="https://indd.adobe.com/view/036b8602-76ff-40de-b0ce-dc8868fa4855" target="_blank">
+             <a  id="artboard-link" style="margin-left:10px;" href="https://indd.adobe.com/view/9afdbb4b-7071-4a7a-a625-869cb74ac677" target="_blank">
               <img src="@/assets/images/pil-44-2-5.png" alt="">
                  <span> CV </span> 
              </a>
            
-
-          </span>
-          
-        </div>
-       </div>
-      </div>
+      </span>
+    
+        </div>   </div>
+      
+     
   <!-- top sektion slut-->
 
 
@@ -167,40 +165,63 @@
 <style lang="scss" scoped>
 /* hero image start */
 
-.hero {
-    background: {
-        background-repeat: no-repeat;
+
+
+.hero-container{
+  background-image: url("../assets/images/me-bg.jpg");   /* hero image her */
+      background-repeat: no-repeat;
       background-attachment: center;
       background-position: center top;
       background-size: cover;
-      height: 800px;
-      width: 100vw;
-      margin-top:-80px; /* skub header op under menu */
+      height:100%;
+      width: 50%;
+      margin-top:2rem; /* skub header op under menu */
       padding-top: 110px;
-    //   repeat: no-repeat;
-    //   attachment: left;
-    //   position: left;
-    //   size: cover;
-      }
-      .me {
-        height: 300%;
-        width: 300%;
-        
-      }
-      height: 800px;
-      width: 100vw;
-    //   margin-top:-80px; /* skub header op under menu */
-    //   padding-top: 110px;
+      opacity: 50%;
+      object-fit: cover;
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 2rem;
+      border-radius: 1rem;
+      background-blend-mode:hue;
+      box-shadow: 5px 5px 20px 5px  rgba(231, 201, 201, 0.5) inset;
       
-    }
 
-    .hero img {
-      height: 50%;
+}
+
+.hero{
+  display: flex;
+  height: 600px;
+  margin: 0 0 3rem 0;
+
+}
+// .hero {
+//       background-image: url("../assets/images/me-bg.jpg");   /* hero image her */
+//       background-repeat: no-repeat;
+//       background-attachment: center;
+//       background-position: center top;
+//       background-size: cover;
+//       height: 500px;
+//       width: 50%;
+//       margin-top:2rem; /* skub header op under menu */
+//       padding-top: 110px;
+//       opacity: 60%;
+//       object-fit: cover;
+//       display: flex;
+//       align-items: baseline;
+//       margin-bottom: 2rem;
+
+      
+//     }
+    
+      
+
+
   
-    }
     .hero-container {
       height:100%;
       display: flex;
+      align-items: baseline;
     //   align-items: center;
     //   width:100%;
     }
@@ -216,20 +237,27 @@
         
              width:60%;
              font-family: 'Courier New', Courier, monospace;
-             color: #3a3a3a;
-             padding-left: 300px;
+             position: relative;
+             display:center;
+             justify-content: center;
+             align-items: center;
+             padding-left: 200px;
+             flex-direction: column;
+              margin-top: 300px;
            }
 
-      .p{
-             font-size: 25px;
-              
+           .top1{
+            font-size: 40px;
            }
 
-     .h2{
+      
+
+     .top2, 
+      .top3{
              opacity: 95%;
-             color: #FAD5DD;
+             color: #787474;
              font-family: 'Courier New', Courier, monospace;
-             font-size: 20px;
+             font-size: 22px;
              font-weight: lighter;
              
          }
@@ -238,9 +266,8 @@
 
     .hero-knap  {
       display: flex;
-      align-items: baseline;
+      align-items: center;
     }
-
     .hero-knap img {
       height:40px;
     }
@@ -258,7 +285,9 @@
   background-color: #e6dada;
   font-family: Courier New;
   font-size: 70px;
-  border-radius: 10px;
+  border-radius: 1rem;
+  // box-shadow: 2px 2px 2px 2px rgb(221, 221, 221);
+  box-shadow: 3px 3px 3px 3px  rgba(190, 189, 189, 0.2) inset;
   }
 
 .what-i-do-container {
@@ -359,6 +388,11 @@ font-size: 70px;
   color: #ededed;
   background-color: #000000;
   padding: 20px;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+  box-shadow: 3px 3px 3px 3px  rgb(251, 200, 200, 0.2) inset;
+  opacity: 80%;
+  
   }
 .work-left{
   width:50%;

@@ -10,7 +10,7 @@
         ProductID: {{ product.id  }}
       </p>
       <p>
-        ProductName: {{ product.productName }}
+        ProductNavn: {{ product.ProductNavn }}
       </p>
       <p>
         productBeskrivelse: {{ product.productBeskrivelse }}

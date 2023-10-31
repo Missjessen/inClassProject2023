@@ -1,12 +1,18 @@
-<template>
-  <div>
-    <h1>Login</h1>
+ 
+ <!-- Login page -->
+  <template>
+
+    <h1>check in</h1>
     Username: <input type="text" v-model="email" />
     Password: <input type="password" v-model="password" />
     <p v-if="errMsg"> {{ errMsg }}</p>
     <button @click="logIn">Login</button>
-  </div>
+  
 </template>
+
+
+<!-- login system -->
+
 
 <script setup>
 import { ref } from 'vue'
@@ -15,9 +21,11 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 
 import router from '../router'
 
-let email = ref ('')
-let password = ref ('')
-const errMsg = ref ('')
+
+  let email = ref ('')
+  let password = ref ('')
+  const errMsg = ref ('')
+
 
 let logIn = () => {
   signInWithEmailAndPassword(auth, email.value, password.value)
@@ -48,5 +56,29 @@ let logIn = () => {
 </script>
 
 <style lang="scss" scoped>
+
+.form {
+ margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+  justify-content: center;
+  height: 20vh;
+  width: 20vw;
+  color: #111;
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
+  
+
+}
 
 </style>

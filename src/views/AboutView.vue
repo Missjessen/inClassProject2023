@@ -2,50 +2,69 @@
   <div class="about">
     <h1>This is an about page</h1>
 
+   <!--  <button class="btn-add" @click="firebaseAddSingleItem()">Add Item</button> -->
+    <div>
+     <!--  <input type="text" placeholder="portfolie navn" v-model="AddportfolioData.portfolioNavn" > -->
+</div>
+<hr>
 
-    <hr>
+    <h1>Portfolio</h1>
 
-    <div v-for="product in products" :key="product">
+    <div v-for="portfolio in portfolios" :key="portfolio">
       <p>
-        ProductID: {{ product.id  }}
+        portfoliosID: {{ portfolio.id }}
       </p>
       <p>
-        ProductNavn: {{ product.ProductNavn }}
+        portfolioNavn: {{ portfolio.portfolioNavn }}
       </p>
       <p>
-        productBeskrivelse: {{ product.productBeskrivelse }}
+        portfolioBeskrivelse: {{ portfolio.portfolioBeskrivelse }}
       </p>
       <p>
-        ProductBillede: {{ product.productBillede }}
-        </p>
-        <p>
-        ProductKategori: {{ product.productKategori }}
-        </p>
+        portfolioBillede: {{ portfolio.portfolioBillede }}
+      </p>
+      <p>
+        portfolioKategori: {{ portfolio.portfolioKategori }}
+      </p>
+      <button class="btn-delete" @click="firebaseDeleteSingleItem(portfolio.id)">Delete item</button>
 
+      <p>
+        <input type="text" placeholder="New portfolie navn" v-model="portfolio.portfolioNavn" />
+      </p>
+      <button class="btn-edit" @click="firebaseUpdateSingleItem(portfolio.id)">Edit item</button>
 
-      <hr>
+  
     </div>
   </div>
 </template>
 
-<script setup>
-import useProducts from '../modules/useProducts.js';
+<script setup> 
+
+
+import usePortfolios from '../modules/usePortfolio.js';
 import { onMounted } from 'vue'
 
 const { 
-  products, 
-  getProductsData, 
+  portfolios, 
+  getPortfoliosData, 
+  firebaseDeleteSingleItem, 
+  firebaseAddSingleItem ,
+  firebaseUpdateSingleItem,
+  AddportfolioData
+  
+  
 
 
   //UpdateProductData
-} = useProducts();
+} = usePortfolios();
 
 onMounted(() => {
-  getProductsData();
+  getPortfoliosData();
+
 })
 
 
-</script>
+</script> 
 
 <style>
 @media (min-width: 1024px) {

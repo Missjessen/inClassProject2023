@@ -8,11 +8,26 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 4rem 3rem 2rem 3rem;
-
+  margin-top: 2rem;
   font-weight: normal;
-}
 
-a,
+}
+.logout {
+   
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+    font-size: 22px;
+   
+
+   }
+
+   nav li:hover {
+    background-color: transparent;
+    opacity: 0,5;
+    border-radius: 2%;
+  }
+  
 .green {
   text-decoration: none;
   color: #e2d1d1;
@@ -37,6 +52,6 @@ a,
     display: flex;
     flex-direction: column;
 /*     grid-template-columns: 1fr 1fr; */
-    
+    /* padding: 0 2rem; */
   }
 }

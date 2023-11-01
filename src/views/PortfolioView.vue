@@ -49,6 +49,9 @@
                 <h2>Navn: {{ portfolio.portfolioNavn }}</h2>
                 <p class="portfolio-category"> Kategori:{{ portfolio.portfolioKategori }}</p>
                 <p class="portfolio-description"> Beskrivelse: {{ portfolio.portfolioBeskrivelse }}</p>
+                  
+                <img :src="portfolio.portfolioBillede" alt="post image" width="200" height="200">
+                <p class="portfolio-description"> Billedet: {{ portfolio.portfolioBillede }}</p>
             </div>
         </div>
     </div>

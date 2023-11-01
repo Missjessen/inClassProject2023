@@ -96,17 +96,37 @@
 <img class="" src="@/assets/images/ae.png" alt=""></div>
 
 <div class="work-right-icons">
-<img class="" src="@/assets/ai5.png" alt=""></div>
+<img class="" src="@/assets/images/visual.png" alt=""></div>
 
 <div class="work-right-icons">
-<img class="" src="@/assets/github.png" alt=""></div>
+<img class="" src="@/assets/images/git.png" alt=""></div>
 
 <div class="work-right-icons">
-<img class="" src="@/assets/visuel.png" alt=""></div>
-</div>
+<img class="" src="@/assets/images/id-8.png" alt=""></div>
 
 
+<div class="work-right-icons">
+<img class="" src="@/assets/images/wp.png" alt=""></div>
+
+
+<div class="work-right-icons">
+<img class="" src="@/assets/images/wp.png" alt=""></div>
+
+
+<div class="work-right-icons">
+<img class="" src="@/assets/images/drone.png" alt=""></div>
+
+
+<div class="work-right-icons">
+<img class="" src="@/assets/images/js.png" alt=""></div>
+
+
+<div class="work-right-icons">
+<img class="" src="@/assets/images/vue.png" alt=""></div>
+
 </div>
+</div>
+
 </div>
 </section>
 <!-- 3. sektion slut-->

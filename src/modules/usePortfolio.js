@@ -7,7 +7,7 @@ const usePortfolio = () => {
   const portfolioDataRef = collection(db, 'portfolios');
 
   const AddPortfolioData = ref({
-    portfolioNavn: '',
+    portfolioName: '',
     portfolioBeskrivelse: '',
     portfolioKategori: '',
     portfolioBillede: ''

@@ -1,12 +1,18 @@
  
  <!-- Login page -->
   <template>
-
-    <h1>check in</h1>
+<form class="form-group">
+ 
+   <div>
     Username: <input type="text" v-model="email" />
     Password: <input type="password" v-model="password" />
     <p v-if="errMsg"> {{ errMsg }}</p>
-    <button @click="logIn">Login</button>
+    <button @click.prevent="logIn">Login</button>
+    
+
+    </div>
+</form>
+    
   
 </template>
 
@@ -57,28 +63,58 @@ let logIn = () => {
 
 <style lang="scss" scoped>
 
-.form {
- margin-top: 4rem;
+.form-group {
+  
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: center;
+  align-items: start;
   justify-content: center;
   height: 100vh;
+  width: 100vw;
+  margin-top: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-large;
 
 }
 
-.login {
+.form-group input{
+display: flow-root;
+  flex-direction: column;
+  align-items:start;
+  justify-content: center;
+
+  color: #111;
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f9f9f9;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: auto;
+
+  
+
+}
+
+.form-group button{
   display: flex;
   flex-direction: column;
   align-items:start;
   justify-content: center;
-  height: 20vh;
-  width: 20vw;
+
   color: #111;
   font-size: medium;
   font-family: 'Courier New', Courier, monospace;
-  
-
+  background-color: #f9f9f9;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: auto;
 }
 
 </style>

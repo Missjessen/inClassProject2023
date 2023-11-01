@@ -1,6 +1,6 @@
 <template>
     <div>
-POrt
+Portfolio
     </div>
 </template>
 

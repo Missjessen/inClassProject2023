@@ -18,15 +18,15 @@
            
             
     <span class="hero-knap"> <!--link pil-->
-           <router-link id="artboard-link" to="/aboutMe.vue">
-              <img src="@/assets/images/pil-44-2-5.png" alt="">
-                 <span>OM MIG</span> 
+           <router-link id="om mig" to="/component/aboutMee.vue">
+            <p style="font-size: x-large; padding-right: 3rem; color: rgb(174, 217, 210); font-weight: bold; font-style: italic;"> <img src="@/assets/images/pil-44-2-5.png" alt="">OM MIG</p>
+               
             
           
             </router-link>  
-               <a  id="artboard-link" style="margin-left:10px;" href="https://indd.adobe.com/view/9afdbb4b-7071-4a7a-a625-869cb74ac677" target="_blank">
-                 <img src="@/assets/images/pil-44-2-5.png" alt="">
-                   <span> CV </span> 
+               <a  id="artboard-link" style="margin-left:10px; padding-right: 2rem;" href="https://indd.adobe.com/view/9afdbb4b-7071-4a7a-a625-869cb74ac677" target="_blank">
+                <p style="font-size: x-large; color: rgb(174, 217, 210); font-weight: bold; font-style: italic; scre"><img src="@/assets/images/pil-44-2-5.png" alt="" >CV</p>
+                
               </a>
            </span>
          </article>
@@ -47,15 +47,15 @@
 .hero-container{
   background-image: url("../assets/images/me-bg.jpg");   /* hero image her */
       background-repeat: no-repeat;
-      background-attachment: center;
+      // background-attachment: center;
       background-position: center top;
-      background-size: cover;
+      
       height:100%;
       width: 50%;
-      margin-top:2rem;
+      margin-top:4rem;
       padding-top: 110px;
       opacity: 50%;
-      object-fit: cover;
+      margin-bottom: 4rem;
       display: flex;
       align-items: baseline;
       margin-bottom: 2rem;
@@ -66,27 +66,22 @@
 
 .hero{
   display: flex;
+  position: relative;
+  justify-content: center;
   height: 600px;
-  margin: 0 0 3rem 0;
+  margin: 0 0 5rem 0;
 }
-    #artboard-link {
-      display: flex;
-      font-size: 20px;
-      align-items: center;
-    }
+  
 
     .heroo-container-rigth 
         {
         
              width:60%;
              font-family: 'Courier New', Courier, monospace;
-             position: relative;
-             display:center;
-             justify-content: center;
-             align-items: center;
+             position: inherit;
+             display:flow-root; 
              padding-left: 80px;
-             flex-direction: column;
-              margin-top: 350px;
+             margin-top: 350px;
            }
 
            .top1{
@@ -118,11 +113,27 @@
       display: flex;
       align-items: center;
       color: #695555;
+      font-size: 30px;
+      padding-top: 1rem;
+      ;
           }
     .hero-knap img {
-      height:40px;
+      height:50px;
+      
+      
     }
-  
+    #om-mig {
+    
+      font-size: 30px;
+      align-items: center;
+    }
+  .link-text {
+    padding-left: 0.3rem;
+    font-size: 20px;
+    
+    font-style: italic;
+    color: #695555;
+  }
 
 /* top hero slut*/
 

@@ -17,6 +17,7 @@
         <p>
           <span>Beskrivelse: </span>{{ portfolio.portfolioBeskrivelse }}
         </p>
+        <img :src="portfolio.portfolioBillede" alt="post image" width="200" height="200">
     <!--     <router-link :to="{ name: 'portfoliodetail', params: { id: portfolio.id } }" class="btn-more">
           <button>Portfolio</button>
         </router-link> -->

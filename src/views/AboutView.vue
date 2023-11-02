@@ -63,9 +63,8 @@ const {
   portfolios, 
   getPortfoliosData, 
   firebaseDeleteSingleItem, 
-  firebaseAddSingleItem ,
   firebaseUpdateSingleItem,
-  AddportfolioData
+ 
   
   
 
@@ -76,7 +75,7 @@ const {
 onMounted(() => {
   getPortfoliosData();
 
-  
+
 
 })
 

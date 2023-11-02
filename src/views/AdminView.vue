@@ -3,28 +3,34 @@
     <div>
       <h1 class="add-text">Add new items</h1>
       <div class="add-item-fb">
-        <p>Navn</p><input type="text" placeholder="Portfolio navn" v-model="AddPortfolioData.portfolioName">
+        <p>Navn</p><input type="text" placeholder="Portfolio navn" v-model="AddPortfolioData.portfolioNavn">
+        <p>Dato</p><input type="date" placeholder="Portfolio date" v-model="AddPortfolioData.portfolioDato">
         <p>Beskrivelse</p><input type="text" placeholder="Portfolio beskrivelse" v-model="AddPortfolioData.portfolioBeskrivelse">
-        <p>Billede</p><input type="text" placeholder="Portfolio billede" v-model="AddPortfolioData.portfolioBillede">
+        <input type="file" label="File input" @change="uploadImg">
         <p>Kategori</p><input type="text" placeholder="Portfolio kategori" v-model="AddPortfolioData.portfolioKategori">
         <button class="btn-add" @click="firebaseAddSingleItem()">Add Item</button>
       </div>
     </div>
     <hr>
     <div class="add-out" style="overflow-wrap: break-word;" v-for="portfolio in portfolios" :key="portfolio.id">
+      
       <p>
         ID: {{ portfolio.id }}
       </p>
       <p>
         Navn: {{ portfolio.portfolioNavn }}
       </p>
+      <p class="date">
+        portfolioDato: {{ portfolio.portfolioDato }}
+        </p>
       <p>
         Beskrivelse: {{ portfolio.portfolioBeskrivelse }}
       </p>
       <p>
         Billede: {{ portfolio.portfolioBillede }}
+        
       </p>
-      <p>
+       <p>
         Kategori: {{ portfolio.portfolioKategori }}
       </p>
       <button class="btn-delete" @click="firebaseDeleteSingleItem(portfolio.id)">Delete item</button>
@@ -48,6 +54,7 @@ const {
   firebaseAddSingleItem,
   AddPortfolioData,
   firebaseUpdateSingleItem,
+  uploadImg
 } = usePortfolios();
 
 onMounted(() => {
@@ -57,73 +64,103 @@ onMounted(() => {
 
 <style>
 
-/* background  */
-body {
-               background-color: #f6f6f6;
-               font-family: 'Courier New', Courier, monospace;
-               
+.about {
+  text-align: start;
+  justify-content: space-between;
+  box-sizing: 50px;
+  margin: 4rem auto;
+  padding: 0 20px;
+  max-width: 700px;
+  min-height: 100vh;
+
+  flex-direction: column;
+  
+  align-items: start;
+  justify-content: start;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+
+
+}
+
+
+
+.add-text {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.add-item-form {
+  display: flex;
+  flex-wrap: wrap;
  
 }
 
-.about{
-               max-width: auto;
-               
-               margin: 0 auto;
-               background-color: #fff;
-               padding: 20px;
-               border-radius: 5px;
-               box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                margin-top: 20px;
-                display: flexbox;
+.form-group {
+  margin: 30px;
+  text-align: left;
+}
 
+label {
+  display: block;
+  margin-bottom: 5px;
 }
-     .add-item-fb input {  /* input add* */
-                 background-color: #f4f1f1;
-                 margin-bottom: 10px;
-                 /* flex: 2; */
-                 display: flex;
-                 
-                 padding: 8px;
-                 border: 1px solid #ccc;
-                 border-radius: 5px;
-                
+
+input[type="text"],
+input[type="date"],
+input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
-      .btn-add {   /* add Btn* */
-                 background-color: #b4b4b4;
-                 border-radius: 5px;
-                 margin-top: 5px;
-                 padding: 6px;
-                 font-size: smaller;
+
+.btn-add,
+.btn-delete,
+.btn-edit {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #dfb9b9;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
-       .add-text { /*Title */
-                 color: #000000;
-                 font-size: larger;
-                 font-weight: bold;
-  
-                }
-                hr {
-  margin: 20px 0 0 20px;
+
+.btn-add:hover,
+.btn-delete:hover,
+.btn-edit:hover {
+  background-color: #b39191;
 }
-      .btn-edit,       
-      .btn-delete {   /* delete Btn* *//* edit Btn* */
-                 background-color: #c5bfbf;
-                 margin-top: 5px;
-                 font-size: small;
-                 padding: 6px;
-                 border: 1px solid #ccc;
-                 border-radius: 5px;
-                 cursor: pointer;
-      }
-      .btn-add:hover,
-      .btn-delete:hover,
-      .btn-edit:hover {
-                  background-color: #f3d0aa;
-                
-                }
-      .add-out{
-        height: 200px;
-        width: 150px;
-      }
+
+.portfolio-list {
+  margin-top: 20px;
+}
+
+.portfolio-item {
+  margin: 10px 0;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-portfolio {
+  margin-top: 10px;
+}
+
+.date {
+  font-weight: bold;
+}
+
+.add-out {
+  margin: 30px 0;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
                   
 
 @media (min-width: 1024px) {

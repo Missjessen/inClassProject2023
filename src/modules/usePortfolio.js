@@ -2,6 +2,7 @@ import { db } from '../firebase.js'
 import { ref } from 'vue'
 import { collection, onSnapshot, doc, deleteDoc, addDoc, updateDoc } from 'firebase/firestore';
 
+
 import { getStorage, ref as fbref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 //import { onMounted , reactive} from 'vue' // using reactive instead of ref, because we also use ref from firebase
 //import { db } from '../firebase.js'
@@ -13,15 +14,17 @@ const usePortfolio = () => {
 
   const AddPortfolioData = ref({
     portfolioName: '',
+    portfolioDato:'',
     portfolioBeskrivelse: '',
-    portfolioKategori: '',
+    portfolioKategori: [],
     portfolioBillede: '',
   })
 
   const UpdatePortfolioData = ref({
     portfolioNavn: '',
+    portfolioDato:'',
     portfolioBeskrivelse: '',
-    portfolioKategori: '',
+    portfolioKategori: [],
     portfolioBillede: ''
   })
 
@@ -31,10 +34,7 @@ const usePortfolio = () => {
         return {
           id: doc.id,
           ...doc.data()
-          // portfolioNavn: doc.data().portfolioNavn,
-          // portfolioBeskrivelse: doc.data().portfolioBeskrivelse,
-          // portfolioKategori: doc.data().portfolioKategori,
-          // portfolioBillede: doc.data().portfolioBillede
+       
         }
       })
     })
@@ -50,6 +50,7 @@ const usePortfolio = () => {
     await addDoc(collection(db, "portfolios"),
       {
         portfolioNavn: AddPortfolioData.value.portfolioNavn,
+        portfolioDato: AddPortfolioData.value.portfolioDato,
         portfolioBeskrivelse: AddPortfolioData.value.portfolioBeskrivelse,
         portfolioKategori: AddPortfolioData.value.portfolioKategori,
         portfolioBillede: AddPortfolioData.value.portfolioBillede
@@ -58,16 +59,29 @@ const usePortfolio = () => {
 
     console.log("is added")
   }
+ 
 
   const firebaseUpdateSingleItem = async(portfolio) => { 
-    await updateDoc(doc(portfolioDataRef, portfolio.id), {
-      portfolioNavn: portfolios.value.find(portfolio => portfolio.id === portfolio.id).portfolioNavn,
+    const portfolioRef = doc(portfolioDataRef, portfolio.id); 
+
+    await updateDoc(portfolioRef, {
+      portfolioNavn: portfolio.portfolioNavn,
+      portfolioDato: portfolio.portfolioDato,
+      portfolioBeskrivelse: portfolio.portfolioBeskrivelse,
+      portfolioKategori: portfolio.portfolioKategori,
+     /*  portfolioNavn: portfolios.value.find(portfolio => portfolio.id === portfolio.id).portfolioNavn,
+      portfolioDato: portfolios.value.find(portfolio => portfolio.id === portfolio.id).portfolioDato,
       portfolioBeskrivelse: portfolios.value.find(portfolio => portfolio.id === portfolio.id).portfolioBeskrivelse,
-      portfolioKategori: portfolios.value.find(portfolio => portfolio.id === portfolio.id).portfolioKategori,
+      portfolioKategori: portfolios.value.find(portfolio => portfolio.id === portfolio.id).portfolioKategori, */
       portfolioBillede: portfolios.value.find(portfolio => portfolio.id === portfolio.id).portfolioBillede
     
     }).then(() => {
-      
+      UpdatePortfolioData.value.portfolioNavn = '';
+      UpdatePortfolioData.value.portfolioDato = '';
+      UpdatePortfolioData.value.portfolioBeskrivelse = '';      
+      UpdatePortfolioData.value.portfolioKategori = [];
+      UpdatePortfolioData.value.portfolioBillede = '';
+
     })
   }
 
@@ -144,6 +158,8 @@ uploadTask.on('state_changed',
     AddPortfolioData,
     firebaseUpdateSingleItem,
     UpdatePortfolioData,
+    
+
     // uploadImg
     uploadImg
   }

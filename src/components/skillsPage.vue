@@ -4,58 +4,86 @@
  
 <!-- 2 section start-->
 
-<section class="what-i-do"> <!-- left text-->
 
-<div class="what-i-do-container">
+  <div class="what-i-do">
+  <!-- component -->
+<section id="box-what-i-do" class="bg-white ">
+    <div class="container px-12 py-10 mx-auto">
+        <h1 id="top-text" class="text-5xl   capitalize lg:text-4xl ">HVAD JEG LAVER SOM DESIGNER         <!-- <span class="underline decoration-white-500">multimediedesigner</span> </h1> --></h1>
+        
+        
+          <router-link id="artboard-link" to="/portfolie">
+         <img class="pil-3" src="@/assets/images/pil-44-2-5.png" alt="">
+            <span>
+            ARTBOARD 
+            </span> 
+        </router-link> 
 
-    <div class="widc-left">
-         <h2 id="wid-h3">HVAD JEG <span id="wid-h3-color2">LAVER</span> SOM MULTIMEDIEDESIGNER</h2>
+        
+        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-6 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
 
+            <div class="p-4 space-y-3 border-4 border-red-50 border-red-50 rounded-xl">
+                <span class="inline-block text-white-500 dark:text-white-400">
+                    <div scr="../assets/images/pr.jpg" class="w-20 h-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  />
+                   <img class="layers" src="@/assets/images/layer2.png" alt="">
+                      
+                        
+                  </div>
+                </span>
 
-<!-- link pil-->
-<router-link id="artboard-link" to="/portfolio"> <!-- link pil-->
-<img src="@/assets/images/pil-44-2-5.png" alt="">
- <span>
- PORTFOLIO 
- </span> 
-</router-link>  
+                <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">UI & UX Design</h1>
 
+                <p class="text-gray-500 dark:text-gray-300">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
+                </p>
 
-<!-- højre boks med iconer-->
-</div>
-<div class="widc-right">
+                <a href="#" class="inline-flex p-2 text-white-500 capitalize transition-colors duration-200 transform bg-white-100 rounded-full dark:bg-white-500 dark:text-white hover:underline hover:text-white-600 dark:hover:text-white-500">
+                    
+                </a>
+            </div>
 
-<div class="widc-right-icons">
- <img class="" src="@/assets/images/video7.png" alt="">
- <h3>Video</h3>
- <p>Videooptagelse, redigering</p>
- <p>og video effektor.</p>
-</div>
+            <div class="p-8 space-y-3 border-4 border-red-50 border-red-50 rounded-xl">
+                <span class="inline-block text-white-500 dark:text-white-400">
+                    <div scr="../assets/images/pr.jpg" class="w-20 h-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  />
+                   <img class="layers" src="@/assets/images/layer2.png" alt="">
+                      </div>
+                </span>
 
-<div class="widc-right-icons">
- <img class="" src="@/assets/webd25.png" alt="">
- <h3>Web designs</h3>
- <p>udvikling og design af websites,</p> 
- <!-- <p>baseret på klientens præferrencer. </p> -->
-</div>
+                <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Grafisk Design</h1>
 
-<div class="widc-right-icons">
-<img class="" src="@/assets/ux25.png" alt="">
-<h3>UX & UI</h3>
-<p>Skaber brugervenlighed</p>
-<p>samt bedre brugeroplevelse på brugerflader.</p>
-</div>
+                <p class="text-gray-500 dark:text-gray-300">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
+                </p>
 
-<div class="widc-right-icons">
-<img class="" src="@/assets/images/branding5.png" alt="">
-<h3>Branding & Rebranding</h3>
-<p>Giver nye/gamle brand nyt liv </p>
-<!-- <p>skaber et stærkt brand for din virksomhed.</p> -->
-</div>
+                <a href="#" class="inline-flex p-2 text-white-500 capitalize transition-colors duration-200 transform bg-white-100 rounded-full dark:bg-white-500 dark:text-white hover:underline hover:text-white-600 dark:hover:text-white-500">
+                    
+                </a>
+            </div>
 
-</div>
-</div>
+            <div class="p-8 space-y-3 border-4 border-red-50 border-red-50 rounded-xl">
+                <span class="inline-block text-white-500 dark:text-white-400">
+                    <div scr="../assets/images/pr.jpg" class="w-20 h-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  />
+                   <img class="layers" src="@/assets/images/layer2.png" alt="">
+                      </div>
+                </span>
+
+                <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Web Design & Branding</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
+                </p>
+
+                
+                   
+               
+            </div>
+        </div>
+    </div>
 </section>
+</div>
 
 <!-- 2. sektion end-->
 
@@ -110,10 +138,6 @@
 
 
 <div class="work-right-icons">
-<img class="" src="@/assets/images/wp.png" alt=""></div>
-
-
-<div class="work-right-icons">
 <img class="" src="@/assets/images/drone.png" alt=""></div>
 
 
@@ -140,112 +164,24 @@
 <style lang="scss" scoped>
 
 /* 2. sektion Widc start*/
-
-/* Wid container venstre*/
-.what-i-do {
+#box-what-i-do {
   height:auto; /** størrelse på området */
   background-color: #e6dada;
-  font-family: Courier New;
+  color: f6f6f6;
+  font-family: bookman;
   // font-size: 50px;
   border-radius: 1rem;
   box-shadow: 3px 3px 3px 3px  rgba(190, 189, 189, 0.2) inset;
   }
-
-.what-i-do-container {
-  color:#6c6a6a;
-  display: flex;
-  border: #ededed;
+#top-text{
+  color: #7e7474;
+  font-size: 70px;
+  padding-top: 3rem;
+  text-align: start;
 }
-
-.widc-left { /* Skub indholdet inde i boxen */
-  width:65%;
-  box-sizing: border-box;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 80px;
-  padding-left: 80px;
- margin-top: 2rem;
- margin-left: 100px;
-  
-} 
-
-/* tekst wid*/
-#wid-h3-a{
-  display: flex;
-  font-size: 20px;
-  align-items: center;
-  
-  
-}
-
-.widc-left{
-  font-size: 35px;
-  font-style: bold;
-
-}
-
-#wid-h3-color2 {
-  color: #877e84;
-  font-size: 35px;
-  font-style: bold;
+  .pil-3{
+    height: 80px;
   }
-
- /* link pil portfolie*/
-.widc-left a img { /* størrelse på pilen pil-44-2-5 */
-  height: 100px;
-  margin-right:3px;
-  margin-top: 20px;
-  }
-
-#widc-left a {
-  color:#ededed;
-  display: flex;
-  font-family: Courier New;
-font-size: 70px;
-}
-
-
-
-#wid-h3-a img {
-  height: 80px;
-  margin-right: 10px;
-}
-
-
-/* højre 2 sektion*/
-.widc-right {
-  display: flex;
-  flex-wrap: wrap;
-  width:60%; /* skift for at gøre box brederererere*/
-  font-size: 25px;
-  font-display: flex-start;
-  padding-right: 70px;
-   margin: 30px;
- 
-  }
-.widc-right-icons {
-  width:50%;
-  box-sizing: border-box;
-  height:150px;
-  background-color: #e6dada; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.widc-right-icons h3 {
-  font-size: 15px;
-}
-.widc-right-icons p{
-  font-size: 10px;
-}
-.widc-right-icons img {
-  height: 100px;
-  padding: 10px;
-  
-}
 
 /* 2. sektion slut*/
 
@@ -267,7 +203,7 @@ font-size: 70px;
   padding: 10px;
   
  
-  font-family: 'Courier New', Courier, monospace;
+  font-family: bookman;
   font-size: 70px;
   margin-left: 20px;
   padding-left: 80px;

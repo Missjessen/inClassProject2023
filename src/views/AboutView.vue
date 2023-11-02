@@ -17,6 +17,9 @@
       <p>
         portfolioNavn: {{ portfolio.portfolioNavn }}
       </p>
+      <p class="date">
+        portfolioDato: {{ portfolio.portfolioDato }}
+        </p>
       <p>
         portfolioBeskrivelse: {{ portfolio.portfolioBeskrivelse }}
       </p>
@@ -30,7 +33,19 @@
 
       <p>
         <input type="text" placeholder="New portfolie navn" v-model="portfolio.portfolioNavn" />
-      </p>
+       </p>
+       <p>
+        <input type="text" placeholder="New portfolie dato" v-model="portfolio.portfolioDato" />
+       </p>
+        <p>
+          <input type="text" placeholder="New portfolie beskrivelse" v-model="portfolio.portfolioBeskrivelse" />
+          </p>
+          <p>
+            <input type="text" placeholder="New portfolie billede" v-model="portfolio.portfolioBillede" />
+            </p>
+            <p>
+              <input type="text" placeholder="New portfolie kategori" v-model="portfolio.portfolioKategori" />
+              </p>
       <button class="btn-edit" @click="firebaseUpdateSingleItem(portfolio.id)">Edit item</button>
 
   
@@ -61,7 +76,11 @@ const {
 onMounted(() => {
   getPortfoliosData();
 
+  
+
 })
+
+
 
 
 </script> 

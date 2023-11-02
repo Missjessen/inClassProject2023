@@ -13,9 +13,10 @@ import aboutme from '../components/AboutMee.vue'  // for hvert components du imp
     
     <heropage />
   <skills/>
+  <portfolio />
    <aboutme />
   <kontakt/>
-  <portfolio />
+ 
   
   </main>
 </template>

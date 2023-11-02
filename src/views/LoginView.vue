@@ -67,12 +67,12 @@ let logIn = () => {
   
 
   display: flex;
-  flex-direction: center;
+  flex-direction: start;
   align-items: start;
-  justify-content: center;
+  justify-content: start;
   height: 100vh;
   width: 100vw;
-  margin-top: 2rem;
+  margin-top: 4rem;
   font-family: 'Courier New', Courier, monospace;
   font-size: x-large;
 

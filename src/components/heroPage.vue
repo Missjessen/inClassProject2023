@@ -77,7 +77,7 @@
         {
         
              width:60%;
-             font-family: 'Courier New', Courier, monospace;
+             font-family: bookman;
              position: inherit;
              display:flow-root; 
              padding-left: 80px;

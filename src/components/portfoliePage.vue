@@ -9,6 +9,7 @@
           <span>Kategori: </span>{{ portfolio.portfolioKategori}} <!-- .join(', ')  -->
         </p>
         <p>
+          
           <span>Dato: </span>{{ portfolio.portfolioDato }}
         </p>
      <!--    <p>

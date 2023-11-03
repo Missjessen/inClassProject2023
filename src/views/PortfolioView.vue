@@ -15,7 +15,7 @@
 
 <!-- test af details -->
 <router-link :to="{ name: 'portfoliodetails', params: { id: portfolio.id } }" class="btn-more">
-          <button>Portfolio
+          <button>Se mere..
             
           </button>
         </router-link>
@@ -28,6 +28,8 @@
                  <p class="desscription-text"> {{ portfolio.portfolioBeskrivelse }}</p>
                   
                 <img :src="portfolio.portfolioBillede" alt="post image" width="200" height="200">
+
+                
               
             </div>
         </div>
@@ -69,6 +71,7 @@
     border-radius: 5px;
     background-color: #f9f9f9;
     margin-top: 4rem;
+    margin-right: 1rem;
   
 }
 /* Styles for the portfolio item title*/
@@ -156,6 +159,13 @@
     border-radius: 5px;
    align-items: center;
     justify-content: bottom;
+}
+
+.btn-more{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    size: 1rem;
 }
 @media (min-width: 378px) {
     .portfolio-item {

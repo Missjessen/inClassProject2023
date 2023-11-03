@@ -16,7 +16,14 @@
       <article>
       <div class="w-full md:w-9/115 h-full flex items-center bg-gray-100 rounded-lg">
         <div class="p-12 md:pr-24 md:pl-16 md:py-12">
-          <p class="text-gray-600">is a UK-based fashion retailer that has nearly doubled in size since last year. They integrated Stripe to deliver seamless checkout across mobile and web for customers in 100+ countries, all while automatically combating fraud.</p>
+          <p id="overskrift" class="text-gray-600 font-bold">Mig som designer</p>
+          
+          <br>
+          <p  class="text-gray-600">Rent personligt er jeg meget lige til. Jeg udstråler god energi og har en stærk sans for humor. Dog, når jeg arbejder, er jeg kendt for min seriøsitet og stræben efter perfektion. Min tilpasningsevne er en af mine styrker, hvilket gør mig alsidig. Dette skyldes mange års erfaring på arbejdsmarkedet, dette CV dækker kun de seneste 7 år. Mit CV er på ingen måde strenget, men det har været min kilde til værdifuld erfaring og har formet mig som person.</p>  
+          <br>
+          <p>Jeg har fundet min lidenskab og glæder mig hver dag til at arbejde som multimediedesigner. Jeg brænder for design, udvikling, branding og markedsføring. Jeg elsker at se mit arbejde omsætte til synlige resultater og i sidste ende økonomisk gevinst.</p>
+           <br>
+          <p>Jeg besidder en skarp tankegang, der kan skabe sammenhæng selv i de mindste detaljer, hvilket jeg altid drager nytte af i mine design- og udviklingsprojekter, i forhold til branding og markedsføring, på alle former for platforms og fysisk promovering.</p>
           <a class="flex items-baseline mt-3 text-indigo-600 hover:text-indigo-900 focus:text-indigo-900" href="">
           </a>
         </div>
@@ -33,11 +40,20 @@
 </script>
 
 <style lang="scss" scoped>
+
+#overskrift{
+  font-family: bookman;
+  font-size: 30px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
 .responsive-card {
   display: flex;
   justify-content: end;
   align-items: center;
   flex-direction: column;
+  font-family: bookman;
 }
 
   @media only screen and (min-width: 378px) {

@@ -12,7 +12,7 @@
         <h1 id="top-text" class="text-5xl   capitalize lg:text-4xl ">HVAD JEG LAVER SOM DESIGNER         <!-- <span class="underline decoration-white-500">multimediedesigner</span> </h1> --></h1>
         
         
-          <router-link id="artboard-link" to="/portfolie">
+          <router-link id="artboard-link" to="/portfolio">
          <img class="pil-3" src="@/assets/images/pil-44-2-5.png" alt="">
             <span>
             ARTBOARD 
@@ -34,8 +34,8 @@
 
                 <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">UI & UX Design</h1>
 
-                <p class="text-gray-500 dark:text-gray-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
+                <p class="text-gray-500 dark:text-gray-300 ">
+                  Skaber brugervenlighed samt bedre brugeroplevelse på brugerflader.
                 </p>
 
                 <a href="#" class="inline-flex p-2 text-white-500 capitalize transition-colors duration-200 transform bg-white-100 rounded-full dark:bg-white-500 dark:text-white hover:underline hover:text-white-600 dark:hover:text-white-500">
@@ -54,7 +54,7 @@
                 <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Grafisk Design</h1>
 
                 <p class="text-gray-500 dark:text-gray-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
+                  Content, Videooptagelse, redigering og video effektor, samt grafisktryg.
                 </p>
 
                 <a href="#" class="inline-flex p-2 text-white-500 capitalize transition-colors duration-200 transform bg-white-100 rounded-full dark:bg-white-500 dark:text-white hover:underline hover:text-white-600 dark:hover:text-white-500">
@@ -72,8 +72,9 @@
 
                 <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Web Design & Branding</h1>
 
-                <p class="text-gray-500 dark:text-gray-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
+                <p class="text-gray-500 dark:text-gray-300" >
+                  Udvikling og design af websites, baseret på klientens præferrencer. Giver nye/gamle brand nyt liv og
+           skaber et stærkt brand for din virksomhed.
                 </p>
 
                 
@@ -92,15 +93,17 @@
 <!-- 3. sektion slut-->
 
 <!-- venstre boks-->
-<section class="work-with">
-<div class="work-with-container">
-<div class="work-left">
-<h1>VÆRKTØJ</h1>
-<h3 id="work-h3">DESIGNER MED</h3>
-<p>Daglige arbejder og designer jeg med adobe pakken </p>
-<p>Når jeg videoredigere, laver effekter og designer websites.</p> 
-<p> print, vektorgrafik og designer for promovering. Kan programmere </p>
-<p>i visuel studio, anvende javascript og frameworks </p>
+  <section class="work-with">
+     <div class="work-with-container">
+        <div class="work-left">
+
+          <h1>VÆRKTØJ</h1>
+
+          <h3 id="work-h3">DESIGNER MED</h3>
+          <p>Daglige arbejder og designer jeg med adobe pakken </p>
+          <p>Når jeg videoredigere, laver effekter og designer websites.</p> 
+          <p> print, vektorgrafik og designer for promovering. Kan programmere </p>
+          <p>i visuel studio, anvende javascript og frameworks.  </p>
 
 
 

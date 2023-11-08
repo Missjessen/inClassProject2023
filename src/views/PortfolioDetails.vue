@@ -1,23 +1,4 @@
-<template>
-   
-       <!--  <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-     
-        
-        <div v-else>Loading...</div>
-        
-        <button @click="goBack()">Go Back</button>
-        Details test {{ props.id }}
-      </div>
-    -->
-  
+<template> 
 <br>
 <br>
 <br>
@@ -42,21 +23,16 @@
   <div class="col2 bg-slate-300  rounded-md ">
     <ul>
       <li class=" font-medium  ">
-        <span >Team:</span>
+        <span >Kategori:</span>
          {{ portfolioDetailView.portfolioKategori }}
       </li>
+      <li class=""><span>Dato:</span> {{ portfolioDetailView.portfolioDato }}</li>
       <div class="child1 p-10">
         
         <li  class="text-3xl font-medium  ">
           <span class=""></span> {{ portfolioDetailView.portfolioNavn }}
         </li>
         <li  class="h-[28rem]"><span>Beskrivelse:</span> <br> {{ portfolioDetailView.portfolioBeskrivelse }}</li>
-      </div>
-
-      <div class="child2 grid grid-cols-3 pt-2 justify-items-center ">
-        <!-- <button class="pr-3"><li class="bg-red-300 p-2"> {{ portfolieDetailView.onedriveLink }}</li></button>
-        <button class="pr-3"><li class="bg-red-300 p-2"> {{ portfolieDetailView.githubLink }}</li></button>
-        <button class="pr-3"><li class="bg-red-300 p-2"> {{ portfolieDetailView.youtubeLink }}</li></button> -->
       </div>
     </ul>
   </div>
@@ -66,10 +42,6 @@
 <div class="grid grid-cols-2 justify-items-center ">
   <ul class="">
 
- </ul>
-
- <ul>
-    <li class=""><span>Dato:</span> {{ portfolioDetailView.portfolioDato }}</li>
  </ul>
 </div>
 </div>
@@ -126,6 +98,13 @@ const goBack = () => {
 </script>
   
   <style lang="scss">
+/* Add styles the app container */
+.app{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
   /* Add styles for the container */
 .container.portfolioDetailView {
   background-color: #f0f0f0;
@@ -134,6 +113,7 @@ const goBack = () => {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: 20px;
   font-family: bookman;
+  
 }
 
 /* Add styles for the grid */

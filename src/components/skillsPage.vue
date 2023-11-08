@@ -1,81 +1,51 @@
 <template>
     <main>
- 
- 
-<!-- 2 section start-->
+ <!-- 2 section landing page, what i do-->
+   <section class="what-i-do">
+    <!-- component -->
+     <div id="box-what-i-do" class="bg-white ">
+        <div class="container px-12 py-10 mx-auto">
+          <h2 id="top-text" class="text-5xl   capitalize lg:text-4xl ">HVAD JEG LAVER SOM DESIGNER</h2>
+          <br>
+      <br>
 
-
-  <div class="what-i-do">
-  <!-- component -->
-<section id="box-what-i-do" class="bg-white ">
-    <div class="container px-12 py-10 mx-auto">
-        <h1 id="top-text" class="text-5xl   capitalize lg:text-4xl ">HVAD JEG LAVER SOM DESIGNER         <!-- <span class="underline decoration-white-500">multimediedesigner</span> </h1> --></h1>
-        
-        
-          <router-link id="artboard-link" to="/portfolio">
-         <img class="pil-3" src="@/assets/images/pil-44-2-5.png" alt="">
-            <span>
-            ARTBOARD 
-            </span> 
-        </router-link> 
-
-        
-        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-6 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-
-            <div class="p-4 space-y-3 border-4 border-red-50 border-red-50 rounded-xl">
+       <!-- 3 boks af skills-->
+  <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-6 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+        <div class="p-4 space-y-3 border-4 border-red-50 border-red-50 rounded-xl">
                 <span class="inline-block text-white-500 dark:text-white-400">
                     <div scr="../assets/images/pr.jpg" class="w-20 h-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  />
-                   <img class="layers" src="@/assets/images/layer2.png" alt="">
-                      
-                        
-                  </div>
-                </span>
-
+                          <img class="layers" src="@/assets/images/pære-png.png" alt="">
+                       </div>
+                    </span>
                 <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">UI & UX Design</h1>
+           <p class="text-gray-500 dark:text-gray-300 "> Skaber brugervenlighed samt bedre brugeroplevelse på brugerflader.</p>
+       <a href="#" class="inline-flex p-2 text-white-500 capitalize transition-colors duration-200 transform bg-white-100 rounded-full dark:bg-white-500 dark:text-white hover:underline hover:text-white-600 dark:hover:text-white-500">
+     </a>
+</div>
 
-                <p class="text-gray-500 dark:text-gray-300 ">
-                  Skaber brugervenlighed samt bedre brugeroplevelse på brugerflader.
-                </p>
-
-                <a href="#" class="inline-flex p-2 text-white-500 capitalize transition-colors duration-200 transform bg-white-100 rounded-full dark:bg-white-500 dark:text-white hover:underline hover:text-white-600 dark:hover:text-white-500">
-                    
-                </a>
-            </div>
+           <div class="p-8 space-y-3 border-4 border-red-50 border-red-50 rounded-xl">
+                <span class="inline-block text-white-500 dark:text-white-400">
+                     <div scr="../assets/images/pr.jpg" class="w-20 h-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  />
+                        <img class="layers" src="@/assets/images/layer2.png" alt="">
+                         </div>
+                      </span>
+                  <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Grafisk Design</h1>
+               <p class="text-gray-500 dark:text-gray-300"> Content, Videooptagelse, redigering og video effektor, samt grafisktryg.</p>
+              <a href="#" class="inline-flex p-2 text-white-500 capitalize transition-colors duration-200 transform bg-white-100 rounded-full dark:bg-white-500 dark:text-white hover:underline hover:text-white-600 dark:hover:text-white-500">
+            </a>
+          </div>
 
             <div class="p-8 space-y-3 border-4 border-red-50 border-red-50 rounded-xl">
                 <span class="inline-block text-white-500 dark:text-white-400">
-                    <div scr="../assets/images/pr.jpg" class="w-20 h-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  />
-                   <img class="layers" src="@/assets/images/layer2.png" alt="">
-                      </div>
-                </span>
-
-                <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Grafisk Design</h1>
-
-                <p class="text-gray-500 dark:text-gray-300">
-                  Content, Videooptagelse, redigering og video effektor, samt grafisktryg.
-                </p>
-
-                <a href="#" class="inline-flex p-2 text-white-500 capitalize transition-colors duration-200 transform bg-white-100 rounded-full dark:bg-white-500 dark:text-white hover:underline hover:text-white-600 dark:hover:text-white-500">
-                    
-                </a>
-            </div>
-
-            <div class="p-8 space-y-3 border-4 border-red-50 border-red-50 rounded-xl">
-                <span class="inline-block text-white-500 dark:text-white-400">
-                    <div scr="../assets/images/pr.jpg" class="w-20 h-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  />
-                   <img class="layers" src="@/assets/images/layer2.png" alt="">
-                      </div>
-                </span>
-
-                <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Web Design & Branding</h1>
-
-                <p class="text-gray-500 dark:text-gray-300" >
-                  Udvikling og design af websites, baseret på klientens præferrencer. Giver nye/gamle brand nyt liv og
-           skaber et stærkt brand for din virksomhed.
-                </p>
+                    <div scr="../assets/images/pr.jpg" class="w-20 h-20" fill="none" viewBox="0 0 25 25" stroke="currentColor">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  />
+                          <img class="layers" src="@/assets/images/web8.png" alt="">
+                         </div>
+                       </span>
+                    <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Web Design & Branding</h1>
+                 <p class="text-gray-500 dark:text-gray-300" > Jeg skaber unikke websites, der er skræddersyet efter klients præferencer. mit mål er at genoplive både nye og etablerede brands og skabe en stærk onlineidentitet.</p>
 
                 
                    
@@ -83,8 +53,9 @@
             </div>
         </div>
     </div>
+  </div>
 </section>
-</div>
+  
 
 <!-- 2. sektion end-->
 

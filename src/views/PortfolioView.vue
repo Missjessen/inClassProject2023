@@ -6,10 +6,6 @@
 
     <div class="portfolio-item-container">
         <div class="portfolio-item" style="overflow-wrap: break-word;" v-for="portfolio in portfolios" :key="portfolio">
-          
-            <!-- <div class="portfolio-item-image">
-                <img src="{{ portfolio.portfolioBillede }}" alt="" />
-            </div> -->
 
             <div class="portfolio-item-details">
 
@@ -27,7 +23,17 @@
                 <p class="portfolio-description"> Beskrivelse: </p>
                  <p class="desscription-text"> {{ portfolio.portfolioBeskrivelse }}</p>
                   
+                 <div class="img-btn">
                 <img :src="portfolio.portfolioBillede" alt="post image" width="200" height="200">
+
+                <!-- test af details -->
+<!-- <router-link :to="{ name: 'portfoliodetails', params: { id: portfolio.id } }" class="btn-more">
+          <button>Se mere..
+            
+          </button>
+        </router-link> -->
+<!-- slut på test-->
+</div>
 
                 
               
@@ -151,22 +157,28 @@
     color: #777;
     margin: 5px 0;
 }
+.img-btn{
+    display: flex;
+  flex-direction: column;
+   justify-self: end;
+    align-items: flex-end;
+    margin-top: 1rem;
+}
 
 .portfolio img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+  
     border-radius: 5px;
-   align-items: center;
-    justify-content: bottom;
+  
 }
 
-.btn-more{
+/* .btn-more{
     display: flex;
     justify-content: end;
     align-items: end;
-    size: 1rem;
-}
+    size: 1rem; */
+
 @media (min-width: 378px) {
     .portfolio-item {
         width: 300px;

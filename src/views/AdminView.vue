@@ -3,10 +3,15 @@
     <div>
       <h1 class="add-text">Add new items</h1>
       <div class="add-item-fb">
+
         <p>Navn</p><input type="text" placeholder="Portfolio navn" v-model="AddPortfolioData.portfolioNavn">
+
         <p>Dato</p><input type="date" placeholder="Portfolio date" v-model="AddPortfolioData.portfolioDato">
+
         <p>Beskrivelse</p><input type="text" placeholder="Portfolio beskrivelse" v-model="AddPortfolioData.portfolioBeskrivelse">
+
         <input type="file" label="File input" @change="uploadImg">
+        
         <p>Kategori</p><input type="text" placeholder="Portfolio kategori" v-model="AddPortfolioData.portfolioKategori">
         <button class="btn-add" @click="firebaseAddSingleItem()">Add Item</button>
       </div>
@@ -20,7 +25,7 @@
       <p>
         Navn: {{ portfolio.portfolioNavn }}
       </p>
-      <p class="date">
+      <p class="dato">
         portfolioDato: {{ portfolio.portfolioDato }}
         </p>
       <p>
@@ -34,10 +39,16 @@
         Kategori: {{ portfolio.portfolioKategori }}
       </p>
       <button class="btn-delete" @click="firebaseDeleteSingleItem(portfolio.id)">Delete item</button>
-      <p>
-        <input type="text" placeholder="New portfolio name" v-model="portfolio.portfolioName" />
-      </p>
+      <ul>
+        <input type="text" placeholder="New portfolio name" v-model="portfolio.portfolioNavn" />
+        <input type ="text" placeholder="New portfolio date" v-model="portfolio.portfolioDato" />
+        <input type ="text" placeholder="New portfolio beskrivelse" v-model="portfolio.portfolioBeskrivelse" />
+        <input type ="text" placeholder="New portfolio billede" v-model="portfolio.portfolioBillede" />
+        
+        <input type ="text" placeholder="New portfolio kategori" v-model="portfolio.portfolioKategori" />
+      </ul>
       <button class="btn-edit" @click="firebaseUpdateSingleItem(portfolio.id)">Edit item</button>
+      
       <hr>
     </div>
   </div>
@@ -55,6 +66,7 @@ const {
   AddPortfolioData,
   firebaseUpdateSingleItem,
   uploadImg
+
 } = usePortfolios();
 
 onMounted(() => {

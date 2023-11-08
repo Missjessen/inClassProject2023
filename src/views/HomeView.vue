@@ -1,4 +1,5 @@
 <script setup>
+
 import heropage from '../components/heroPage.vue'
 import skills from '../components/skillsPage.vue'
 import kontakt from '../components/kontaktPage.vue'
@@ -10,7 +11,7 @@ import aboutme from '../components/AboutMee.vue'  // for hvert components du imp
 
 <template>
   <main>
-    
+   
     <heropage />
   <skills/>
   <portfolio />

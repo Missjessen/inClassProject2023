@@ -22,7 +22,7 @@
     <div class="project-view flex grid md:lg:grid-cols-4 sm:grid-cols-1">
       
       <div class="admin_project_card" v-for="portfolio in newestPortfolios" :key="portfolio.id">
-        <h3>{{ portfolio.portfolioNavn }}</h3>
+        <h3 class="overskrift">{{ portfolio.portfolioNavn }}</h3>
         <p><span>Kategori: </span>{{ portfolio.portfolioKategori }}</p>
         <p><span>Dato: </span>{{ portfolio.portfolioDato }}</p>
         <!-- <p><span>Team: </span>{{ project.projectTeam }}</p> -->
@@ -77,6 +77,21 @@ onMounted(() => {
   margin-left: 3rem;
   margin-bottom: -4rem;
 }
+
+.overskrift{
+  font-family: bookman;
+  font-size: 22px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin-top: 3rem;
+  color: #4e4c4c;
+  font-weight: bold;
+  
+  
+
+  
+}
 .bottum-portfolio{
 
 font-family: bookman;
@@ -90,12 +105,13 @@ margin-bottom: 1rem;
 }
 
 #artboard-link, .pil-3{
-  display: flexbox;
+  display: flex;
   flex-direction: row;
   justify-content:right;
   align-content: right;
  
-  height: 5rem;
+  height: 2rem;
+  width: 2rem;;
 
 }
 .admin_project_card {
@@ -103,6 +119,7 @@ margin-bottom: 1rem;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: bookman;
   
 }
  
@@ -134,6 +151,9 @@ img {
   font-weight: lighter;
  
 
+}
+.admin_project_card p{
+  font-family: 'Courier New', Courier, monospace;
 }
 
 

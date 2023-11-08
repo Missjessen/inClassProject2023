@@ -4,9 +4,7 @@ import { collection, onSnapshot, doc, deleteDoc, addDoc, updateDoc } from 'fireb
 
 
 import { getStorage, ref as fbref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-//import { onMounted , reactive} from 'vue' // using reactive instead of ref, because we also use ref from firebase
-//import { db } from '../firebase.js'
-//import usePosts from '../modules/usePosts' 
+
 
 const usePortfolio = () => {
   const portfolios = ref([]); // to store data from firebase
@@ -16,7 +14,7 @@ const usePortfolio = () => {
     portfolioName: '',
     portfolioDato:'',
     portfolioBeskrivelse: '',
-    portfolioKategori: [],
+    portfolioKategori: '',
     portfolioBillede: '',
   })
 
@@ -24,7 +22,7 @@ const usePortfolio = () => {
     portfolioNavn: '',
     portfolioDato:'',
     portfolioBeskrivelse: '',
-    portfolioKategori: [],
+    portfolioKategori: '',
     portfolioBillede: ''
   })
 
@@ -49,6 +47,7 @@ const usePortfolio = () => {
   const firebaseAddSingleItem = async() => {
     await addDoc(collection(db, "portfolios"),
       {
+        
         portfolioNavn: AddPortfolioData.value.portfolioNavn,
         portfolioDato: AddPortfolioData.value.portfolioDato,
         portfolioBeskrivelse: AddPortfolioData.value.portfolioBeskrivelse,
@@ -65,25 +64,28 @@ const usePortfolio = () => {
     const portfolioRef = doc(portfolioDataRef, portfolio.id); 
 
     await updateDoc(portfolioRef, {
-      portfolioNavn: portfolio.portfolioNavn,
+ /*      portfolioNavn: portfolio.portfolioNavn,
       portfolioDato: portfolio.portfolioDato,
       portfolioBeskrivelse: portfolio.portfolioBeskrivelse,
-      portfolioKategori: portfolio.portfolioKategori,
-     /*  portfolioNavn: portfolios.value.find(portfolio => portfolio.id === portfolio.id).portfolioNavn,
+      portfolioKategori: portfolio.portfolioKategori, */
+portfolioNavn: portfolios.value.find(portfolio => portfolio.id === portfolio.id).portfolioNavn,
       portfolioDato: portfolios.value.find(portfolio => portfolio.id === portfolio.id).portfolioDato,
       portfolioBeskrivelse: portfolios.value.find(portfolio => portfolio.id === portfolio.id).portfolioBeskrivelse,
-      portfolioKategori: portfolios.value.find(portfolio => portfolio.id === portfolio.id).portfolioKategori, */
+      portfolioKategori: portfolios.value.find(portfolio => portfolio.id === portfolio.id).portfolioKategori, 
       portfolioBillede: portfolios.value.find(portfolio => portfolio.id === portfolio.id).portfolioBillede
     
-    }).then(() => {
-      UpdatePortfolioData.value.portfolioNavn = '';
-      UpdatePortfolioData.value.portfolioDato = '';
-      UpdatePortfolioData.value.portfolioBeskrivelse = '';      
-      UpdatePortfolioData.value.portfolioKategori = [];
-      UpdatePortfolioData.value.portfolioBillede = '';
-
-    })
+    }).then(() => { 
+      updateDoc(portfolioRef, {
+        portfolioNavn: UpdatePortfolioData.value.portfolioNavn,
+        portfolioDato: UpdatePortfolioData.value.portfolioDato,
+        portfolioBeskrivelse: UpdatePortfolioData.value.portfolioBeskrivelse,
+        portfolioKategori: UpdatePortfolioData.value.portfolioKategori,
+        portfolioBillede: UpdatePortfolioData.value.portfolioBillede
+      })
+     })
   }
+  
+  console.log("is updated")
 
   // upload image to firebase storage
   
